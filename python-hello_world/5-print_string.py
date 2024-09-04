@@ -2,5 +2,5 @@
 
 str = "Holberton School"
 
-print("%s" % str*3)
-print("%s" % str[0:9])
+print(f"{str}" * 3)
+print(f"{str[0:9]}")
