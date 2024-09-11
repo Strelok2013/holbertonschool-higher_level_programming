@@ -1,13 +1,10 @@
 #!/usr/bin/python3
 
 def uniq_add(my_list=[]):
-    uniq = []
+    result = 0
+    uniq = set()
     for item in my_list:
-        for item2 in uniq:
-            if item == item2:
-                continue
-            else:
-                uniq.append(item)
-    print(uniq)
-
-uniq_add
+            uniq.add(item)
+    for number in uniq:
+        result += number
+    return result
