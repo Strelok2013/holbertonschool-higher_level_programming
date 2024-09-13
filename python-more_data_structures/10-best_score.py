@@ -3,7 +3,7 @@
 def best_score(a_dictionary):
     score_comp = 0
     best_score = ""
-    if a_dictionary == None:
+    if a_dictionary is None:
         return None
     for item in a_dictionary:
         if a_dictionary[item] > score_comp:
