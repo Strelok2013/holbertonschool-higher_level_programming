@@ -23,7 +23,7 @@ Floating point numbers also work
 
 ::
 
-    >>> my_function(2.0, 3)
+    >>> add_integer(2.0, 3)
     5
 
 
