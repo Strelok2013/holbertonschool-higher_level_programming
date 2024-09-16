@@ -1,6 +1,13 @@
 #!/usr/bin/python3
 
 def add_integer(a, b=98):
+    """
+    Returns the products of two integers or floats
+
+    Casts floats to ints
+
+    Raises exception when not float or int???
+    """
     try:
         if a or b is not int or float:
             raise TypeError
