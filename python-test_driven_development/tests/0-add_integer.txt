@@ -33,4 +33,5 @@ Non-Numbers
 ::
 
     >>> add_integer('a', 3)
+    Traceback (most recent call last):
     TypeError: a must be an integer
