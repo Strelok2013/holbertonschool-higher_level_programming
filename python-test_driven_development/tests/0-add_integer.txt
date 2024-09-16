@@ -2,7 +2,7 @@
 How to use add_integer.py
 =======================
 
-Blah blah, its just a file that adds 2 ints and prints excetions when it fails
+Blah blah, its just a file that adds 2 ints and prints exceptions when it fails
 
 Numbers
 ============
@@ -32,4 +32,4 @@ Non-Numbers
 
 ::
 
-    >>>add_integer('a', 3)
+    >>> add_integer('a', 3)
