@@ -1,0 +1,35 @@
+=======================
+How to use add_integer.py
+=======================
+
+Blah blah, its just a file that adds 2 ints and prints excetions when it fails
+
+Numbers
+============
+``add_integer()`` returns the product of two ints or floats
+
+::
+
+    >>> from 0-add_integer import add_integer
+    >>> add_integer(2, 3)
+    5
+
+::
+
+    >>> add_integer(2, -3)
+    -1
+
+Floating point numbers also work
+
+::
+
+    >>> my_function(2.0, 3)
+    5
+
+
+Non-Numbers
+===========
+
+::
+
+    >>>add_integer('a', 3)
