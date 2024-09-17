@@ -10,7 +10,7 @@ class Square:
     __size = 0
     __position = (0, 0)
 
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         """
         Initializes the square
         """
@@ -20,7 +20,8 @@ class Square:
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
 
-        self.__size = size 
+        self.size = size 
+        self.position = position
 
     def area(self):
         """
