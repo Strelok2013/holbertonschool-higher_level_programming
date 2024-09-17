@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
+"""
+Module that defines a function that prints first and last name
+"""
+
 def sat_my_name(first_name, last_name):
     """
         Prints the first and last name

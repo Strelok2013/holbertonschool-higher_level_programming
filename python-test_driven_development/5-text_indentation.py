@@ -1,6 +1,14 @@
 #!/usr/bin/python3
 
+"""
+    Defines a function that formats text
+"""
+
 def text_indentation(text):
+    """
+        Splits a string into lines based on delimiters
+        Raises an exception if input isn't a string
+    """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     
