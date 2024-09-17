@@ -1,0 +1,52 @@
+===============
+Text Indentation
+===============
+
+Usage
+=====
+
+::
+    >>> text_indentation = __import__(5-text_indentation).text_indentation
+    >>> text_indentation("         some text")
+    some text
+    <BLANKLINE>
+
+::
+    >>> text_indentation("some text            some more text")
+    some text some more text
+    <BLANKLINE>
+
+::
+    >>> text_indentation("some text\n more text")
+    some text
+    <BLANKLINE>
+    more text
+    <BLANKLINE>
+
+::
+    >>> text_indentation("string of text")
+    string of text
+    <BLANKLINE>
+
+::
+    >>> text_indentation(23)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+::
+    >>> text_indentation("          ")
+
+::
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+
+Tests:
+spaces before text
+text separated with several spaces
+newlines
+text=string
+text=not string => TypeError
+text= string with blank line
+missing one arg

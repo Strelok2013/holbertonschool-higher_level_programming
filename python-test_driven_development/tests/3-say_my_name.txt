@@ -1,0 +1,55 @@
+============
+Say my name
+============
+
+
+Usage
+=====
+
+Only one variable
+
+::
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name("Blorbo")
+    My name is Blorbo
+
+Two strings
+
+::
+
+    >>> say_my_name("Blorbo", "Bleebus")
+    My name is Blorbo Bleebus
+
+Two strings with spaces
+
+::
+    >>> say_my_name("Blorbo Bleebus", "Bleebus Blorbo")
+    My name is Blorbo Bleebus Bleebus Blorbo
+
+Non-strings
+===========
+
+Invalid lastName
+
+::
+
+    >>> say_my_name("Blorbo", None)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+Invalid firstName
+
+::
+
+    >>> say_my_name(None, "Bleebus")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+No arguments
+
+::
+
+    >>> say_my_name()
+    Traceback (most recent call last):
+    TypeError: first_name must be a string

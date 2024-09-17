@@ -1,0 +1,39 @@
+===========
+print square
+===========
+
+Usage
+=====
+
+print 1 square
+
+::
+    >>> print_square =   __import__(4-print_square).print_square
+    >>>  print_square(1)
+    #
+
+print empty square
+
+::
+    >>> print_square(0)
+    
+Non-int for input
+
+::
+    >>> print_square('a')
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+Negative integer
+
+::
+    >>> print_square(-2)
+    Traceback (most recent call last):
+    ValueError: size must be >=0
+
+Empty input
+
+::
+    >>> print_square()
+    Traceback (most recent call last):
+    TypeError: size must be an integer
