@@ -14,11 +14,11 @@ class Square:
         """
         Initializes the square
         """
-        if size < 0:
-            raise ValueError("size must be >= 0")
-
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
+
+        if size < 0:
+            raise ValueError("size must be >= 0")
 
         self.size = size 
         self.position = position
@@ -41,10 +41,10 @@ class Square:
         """
         Sets the size of the square
         """
-        if value < 0:
-            raise ValueError("size must be >= 0")
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
+        if value < 0:
+            raise ValueError("size must be >= 0")
         self.__size = value
 
     @property
@@ -75,3 +75,4 @@ class Square:
             return
         for i in range(0, self.__size):
             print(" " * self.__position[0] + "#" * self.__size)
+            print("")
