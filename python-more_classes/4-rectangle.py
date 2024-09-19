@@ -81,5 +81,5 @@ class Rectangle:
         Returns a formal string representation of the rectangle instance.
         """
         rect = "Rectangle(" + str(self.__width)
-        rect += "," + str(self.__height) + ")"
+        rect += ", " + str(self.__height) + ")"
         return rect
