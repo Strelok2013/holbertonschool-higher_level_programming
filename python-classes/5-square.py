@@ -3,6 +3,7 @@
 Defines a class Square
 """
 
+
 class Square:
     """
     Square
@@ -13,14 +14,14 @@ class Square:
         """
         Initializes the square
         """
-        self.__size = size 
+        self.__size = size
 
     def area(self):
         """
         Returns the area of the square
         """
         return self.__size * self.__size
-    
+
     @property
     def size(self):
         """

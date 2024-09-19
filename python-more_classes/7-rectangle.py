@@ -4,11 +4,12 @@
 Defines a class called Rectangle
 """
 
+
 class Rectangle:
     """
         A rectangle >:|
     """
-    
+
     number_of_instances = 0
     print_symbol = "#"
 
@@ -21,7 +22,6 @@ class Rectangle:
         self.__height = height
 
     @property
-    
     def width(self):
         """
         Getter/Setter for width
@@ -72,15 +72,15 @@ class Rectangle:
         """
         if self.__width == 0 or self.__height == 0:
             return ""
-        
+
         rect = []
 
         for i in range(self.__height):
             [rect.append(str(self.print_symbol)) for j in range(self.__width)]
-            if i != self.__height -1:
+            if i != self.__height - 1:
                 rect.append("\n")
         return "".join(rect)
-    
+
     def __repr__(self):
         """
         Returns a formal string representation of the Rectangle
@@ -88,10 +88,11 @@ class Rectangle:
         rect = "Rectange(" + str(self.__Width)
         rect += "," + str(self.__height) + ")"
         return rect
-    
+
     def __del__(self):
         """
-        Prints a message when deleting a Rectangle and decrements the number of instances
+        Prints a message when deleting a Rectangle
+        Decrements the number of instances
         """
         type(self).number_of_instances -= 1
         print("Bye rectangle...")

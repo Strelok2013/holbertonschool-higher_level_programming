@@ -4,6 +4,7 @@
 Defines a class called Rectangle
 """
 
+
 class Rectangle:
     """
         A rectangle >:|
@@ -16,7 +17,6 @@ class Rectangle:
         self.__height = height
 
     @property
-    
     def width(self):
         """
         Getter/Setter for Width
@@ -67,15 +67,15 @@ class Rectangle:
         """
         if self.__width == 0 or self.__height == 0:
             return ""
-        
+
         rect = []
 
         for i in range(self.__height):
             [rect.append('#') for j in range(self.__width)]
-            if i != self.__height -1:
+            if i != self.__height - 1:
                 rect.append("\n")
         return "".join(rect)
-    
+
     def __repr__(self):
         """
         Returns a formal string representation of the rectangle instance.

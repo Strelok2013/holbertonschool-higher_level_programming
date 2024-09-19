@@ -4,6 +4,7 @@
 Defines a class called Rectangle
 """
 
+
 class Rectangle:
     """
         A rectangle >:|
