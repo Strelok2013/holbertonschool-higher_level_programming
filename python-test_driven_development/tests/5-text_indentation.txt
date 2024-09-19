@@ -6,7 +6,7 @@ Usage
 =====
 
 ::
-    >>> text_indentation = __import__(5-text_indentation).text_indentation
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
     >>> text_indentation("         some text")
     some text
     <BLANKLINE>
@@ -40,13 +40,3 @@ Usage
     >>> text_indentation()
     Traceback (most recent call last):
     TypeError: text must be a string
-
-
-Tests:
-spaces before text
-text separated with several spaces
-newlines
-text=string
-text=not string => TypeError
-text= string with blank line
-missing one arg

@@ -9,7 +9,7 @@ print 1 square
 
 ::
     >>> print_square = __import__('4-print_square').print_square
-    >>>  print_square(1)
+    >>> print_square(1)
     #
 
 print empty square
