@@ -3,24 +3,17 @@
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
-class Rectangle(BaseGeometry):
+class Square(Rectangle):
     """Class definition for Square, derived from Rectangle"""
-    def __init__(self, width, height):
+    def __init__(self, size):
         """Initializes the square with size
            Runs validation check on size
            which in turn raises its own exceptions   
         """
-        integer_validator(width)
+        self.integer_validator("size", size)
+        self.__width = size
+        self.__height = size
 
-        integer_validator(height)
-
-        self.__width = width
-        self.__height = height
-
-    def area():
+    def area(self):
         """Returns the area of the Square"""
-        return width ** 2
-
-    def __str__():
-        """Returns a string representation of Square"""
-        return "[Square] {}/{}".format(width, height)
+        return self.__width ** 2

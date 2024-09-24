@@ -10,7 +10,7 @@ class Square(Rectangle):
            Runs validation check on size
            which in turn raises its own exceptions   
         """
-        integer_validator(size)
+        self.integer_validator("size", size)
         self.__width = size
         self.__height = size
 

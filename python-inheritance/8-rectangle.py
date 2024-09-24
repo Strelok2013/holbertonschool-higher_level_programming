@@ -10,9 +10,9 @@ class Rectangle(BaseGeometry):
            Runs validation checks on width and height
            which in turn raise exceptions if they fail
         """
-        integer_validator(width)
+        self.integer_validator("width", width)
 
-        integer_validator(height)
+        self.integer_validator("height", height)
 
         self.__width = width
         self.__height = height

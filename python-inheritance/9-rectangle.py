@@ -10,9 +10,9 @@ class Rectangle(BaseGeometry):
            Runs validation checks on width and height
            which in turn raise exceptions if they fail
         """
-        integer_validator(width)
+        self.integer_validator("width", width)
 
-        integer_validator(height)
+        self.integer_validator("height", height)
 
         self.__width = width
         self.__height = height
@@ -23,4 +23,6 @@ class Rectangle(BaseGeometry):
     
     def __str__(self):
         """Returns a string representation of the rectangle"""
-        return "[Rectangle] {}/{}".format(self.__width, self.__height)
+        string = "[" + str(self.__class__.__name__) + "] "
+        string += str(self.__width) + "/" + str(self.__height)
+        return string
