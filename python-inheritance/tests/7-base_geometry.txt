@@ -49,7 +49,7 @@ integer_validator("age", 0)
 
 ::
     >>> bg.integer_validator("age", 0)
-
+    ValueError: age must be greater than 0
 
 integer_validator("age", -4)
 ========================
