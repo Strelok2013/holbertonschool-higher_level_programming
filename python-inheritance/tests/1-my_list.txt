@@ -100,3 +100,4 @@ print_sorted() returns a new list
 
 ::
     >>> print(my_list)
+    [2, -3, 7, 1, 3]
