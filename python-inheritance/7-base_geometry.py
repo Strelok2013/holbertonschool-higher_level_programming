@@ -1,4 +1,4 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 
 """Defines a module for the base geometry class"""
 
@@ -15,8 +15,11 @@ class BaseGeometry():
            Raises a Type error if the value is non-integer
            Raises a Value error if the value is less than 0
         """
-        if not type(value, int):
+        if type(value) != int:
             raise TypeError("{} must be an integer".format(name))
         
         if value < 0:
             raise ValueError("{} must be greater than 0".format(name))
+
+bg = BaseGeometry()
+bg.integer_validator("age", None)
