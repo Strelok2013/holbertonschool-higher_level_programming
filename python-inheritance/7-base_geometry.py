@@ -2,7 +2,8 @@
 
 """Defines a module for the base geometry class"""
 
-class BaseGeometry():
+
+class BaseGeometry:
     """Defines the BaseGeometry class"""
     def area(self):
         """Raises an exception if this method is used on the base class
