@@ -1,17 +1,3 @@
-test(icles)
-Sample:
-::
-    >>>command()
-    >>>commnad2()
-    expectedresult
-
-error sample:
-::
-    >>>command()
-    >>>command()
-    Traceback (most recent call last):
-    Exception: description of exception
-
 Instantiation
 =============
 
