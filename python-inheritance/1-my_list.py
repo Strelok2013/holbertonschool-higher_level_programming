@@ -10,7 +10,3 @@ class MyList(list):
            Sorted in ascending order
         """
         print(sorted(self))
-
-
-my_list = MyList()
-print(issubclass(MyList, list))
