@@ -47,7 +47,7 @@ check inherits from list ????
 
 ::
     >>>my_list = MyList()
-    >>>issubclassMyList, list)
+    >>>issubclass(MyList, list)
     True
 
 print_sorted() with sorted append
