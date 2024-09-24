@@ -94,10 +94,10 @@ integer_validator("age", True)
     TypeError: age must be an integer
 
 
-integer_validator("age", (3,4))
+integer_validator("age", {3,4})
 
 ::
-    >>> bg.integer_validator("age", (3,4))
+    >>> bg.integer_validator("age", {3,4})
     Traceback (most recent call last):
     TypeError: age must be an integer
 
