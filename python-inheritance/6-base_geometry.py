@@ -1,6 +1,7 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 
 """Defines a module for the base geometry class"""
+
 
 class BaseGeometry():
     """Defines the BaseGeometry class"""

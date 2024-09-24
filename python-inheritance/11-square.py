@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-
+"""Defines a module that defines the a subclass of Rectangle, Square"""
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-"""Defines a module that defines the a subclass of Rectangle, Square"""
 
 class Rectangle(BaseGeometry):
     """Class definition for Square, derived from Rectangle"""

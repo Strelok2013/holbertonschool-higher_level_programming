@@ -1,0 +1,15 @@
+test(icular)
+
+check instantiation
+area()
+integer_validator()
+integer_validator("age")
+integer_validator("age", 1)
+integer_validator("age", 0)
+integer_validator("age", -4)
+integer_validator("age", "4")
+integer_validator("age", (4,))
+integer_validator("age", [3]])
+integer_validator("age", True)
+integer_validator("age", (3,4))
+integer_validator("age", None)
