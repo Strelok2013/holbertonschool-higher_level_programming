@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 
-"""Defines a module for a function that checks 
+"""Defines a module for a function that checks
    an instance of a class
 """
+
 
 def is_kind_of_class(obj, a_class):
     """Function that checks whether an object is

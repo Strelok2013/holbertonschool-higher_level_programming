@@ -4,12 +4,13 @@
    is a derived class
 """
 
+
 def inherits_from(obj, a_class):
     """Defines a function that checks whether an object is
        a sublcass
        Returns true if the object is a subclass
        Returns false otherwise
     """
-    if issubclass(type(obj), a_class) and type(obj) != a_class:
+    if issubclass(type(obj), a_class) and type(obj) is not a_class:
         return True
     return False
