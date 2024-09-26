@@ -1,41 +1,36 @@
 #!/usr/bin/python3
+""" Nameless module for extending the Iterator obtained from the iter function """
 
-""""""
 
+class CountedIterator:
+    """CountedIterator
 
-class CountedIterator():
-    """"""
+    Args:
+        Nothing
+
+    Returns:
+        Iterator or item within iterator
+
+    """
 
     iterator = iter([])
-    counter: int = 0
-    def __init__(self, somedata):
-        self.iterator = iter(somedata)
-        self.counter = 0
-        pass
+    count: int = 0
 
-    def __iter__():
+    def __init__(self, iterable):
+        self.iterator = iter(iterable)
+        self.count = 0
+
+    def __iter__(self):
         return self
 
-    def get_count(self):
-        """"""
-        return self.counter
-    
     def __next__(self):
-        """"""
         try:
             item = next(self.iterator)
-            self.__counter += 1
+            self.count = self.count + 1
             return item
         except StopIteration as exc:
             raise StopIteration() from exc
-    
 
-data = [1, 2, 3, 4, 5]
-counted_iterator = CountedIterator(data)
-
-try:
-    while True:
-        item = next(counted_iterator)
-        print(f"Got {item}, total {counted_iterator.get_count()} items iterated.")
-except StopIteration:
-    print("No more items.")
+    def get_count(self) -> int:
+        """returns count value"""
+        return self.count
