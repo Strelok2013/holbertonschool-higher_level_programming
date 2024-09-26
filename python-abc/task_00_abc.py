@@ -12,10 +12,10 @@ class Animal(ABC):
 
 class Dog(Animal):
     """"""
-    def sound():
+    def sound(self):
         return "Bark"
     
 class Cat(Animal):
     """"""
-    def sound():
+    def sound(self):
         return "Meow"

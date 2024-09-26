@@ -20,7 +20,7 @@ class CountedIterator():
         return next(self.iterator)
     
 
-data = [1, 2, 3, 4]
+data = [1, 2, 3, 4, 5]
 counted_iterator = CountedIterator(data)
 
 try:
