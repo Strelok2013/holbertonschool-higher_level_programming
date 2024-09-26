@@ -5,19 +5,29 @@
 
 class CountedIterator():
     """"""
+
+    iterator = iter([])
+    counter: int = 0
     def __init__(self, somedata):
         self.iterator = iter(somedata)
-        self.__counter = 0
+        self.counter = 0
         pass
+
+    def __iter__():
+        return self
 
     def get_count(self):
         """"""
-        return self.__counter
+        return self.counter
     
     def __next__(self):
         """"""
-        self.__counter += 1
-        return next(self.iterator)
+        try:
+            item = next(self.iterator)
+            self.__counter += 1
+            return item
+        except StopIteration as exc:
+            raise StopIteration() from exc
     
 
 data = [1, 2, 3, 4, 5]

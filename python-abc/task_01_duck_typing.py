@@ -21,11 +21,24 @@ class Shape(ABC):
 class Circle(Shape):
     """"""
 
-    def __init__(self, radius):
+    def __init__(self, radius=0):
         """"""
         if radius < 0:
             raise ValueError("Radius must be greater than 0")
         self.__radius = radius
+
+    @property
+    def radius(self):
+        """"""
+        return self.__radius
+    
+    @radius.setter
+    def radius(self, value):
+        """"""
+        if value < 0:
+            value = abs(value)
+        
+        self.__radius = value
 
     def area(self):
         """"""
