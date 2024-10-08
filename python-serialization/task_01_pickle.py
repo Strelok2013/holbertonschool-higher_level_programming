@@ -43,6 +43,8 @@ class CustomObject():
         try:
             with open(filename, 'rb') as f:
                 return pickle.load(f)
+        except EOFError:
+            print("File corrupted")
         except FileNotFoundError:
             print("File not found")
         
