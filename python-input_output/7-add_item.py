@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-import sys
 """Module that loads and adds items
    to a json file.
    If the file does not exist,
    it creates the file.
 """
+import sys
+
 
 if __name__ == "__main__":
     save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
