@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""""""
+"""Module that defines the
+   load_from_json_file function
+"""
 import json
 
 
