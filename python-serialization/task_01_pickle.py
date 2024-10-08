@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import sys
 import pickle
 """"""
 
@@ -25,32 +26,24 @@ class CustomObject():
         """"""
         if not filename:
             print("Invalid filename")
+            sys.exit()
 
-        with open(filename, 'wb') as f:
-            pickle.dump(self, f)
+        try:
+            with open(filename, 'wb') as f:
+                pickle.dump(self, f)
+        except FileNotFoundError:
+            print("File not found")
 
     @classmethod
     def deserialize(cls, filename):
         """"""
         if not filename:
             print("Invalid filename")
-            return None
+            sys.exit()
         try:
             with open(filename, 'rb') as f:
                 return pickle.load(f)
         except FileNotFoundError:
             print("File not found")
-            return None
-
-# Create an instance of CustomObject
-obj = CustomObject(name="John", age=25, is_student=True)
-print("Original Object:")
-obj.display()
-
-# Serialize the object
-obj.serialize("object.pkl")
-
-# Deserialize the object into a new instance
-new_obj = CustomObject.deserialize("object.pkl")
-print("\nDeserialized Object:")
-new_obj.display()
+        
+        return None
