@@ -1,9 +1,5 @@
 #!/usr/bin/python3
-"""Module that loads and adds items
-   to a json file.
-   If the file does not exist,
-   it creates the file.
-"""
+"""Add all arguments to a Python list and save them to a file."""
 import sys
 
 
