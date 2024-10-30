@@ -8,7 +8,6 @@ from flask import abort
 
 app = Flask(__name__)
 
-if __name__ == "__main__": app.run()
 users = {}
 newUser = {"username": "john", "name": "John", "age": 30, "city": "New York"}
 
@@ -57,3 +56,4 @@ def add_user(user):
     message = {"Message": "User added", "User": usr}
     return jsonify(message), 201
 
+if __name__ == "__main__": app.run()

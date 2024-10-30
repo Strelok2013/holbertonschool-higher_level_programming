@@ -6,7 +6,8 @@ import csv
 def fetch_and_print_posts():
     r = requests.get('https://jsonplaceholder.typicode.com/posts')
     json_data = r.json()
-    print(r)
+    print("Status Code: {}".format(r.status_code))
+
     for i in range(len(json_data)):
         print(json_data[i]['title'])
 
@@ -26,5 +27,3 @@ def fetch_and_save_posts():
         for i in list:
             e = {"id": i['id'], "title": i['title'], "body": i['body'].replace("\n", " ")}
             writer.writerow(e)
-fetch_and_print_posts()
-fetch_and_save_posts()
