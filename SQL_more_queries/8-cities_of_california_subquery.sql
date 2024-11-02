@@ -1,4 +1,6 @@
-SELECT * FROM
+-- Selects all cities from the state california
+SELECT id, name FROM cities WHERE state_id IN
 (
-    SELECT 
+    SELECT id FROM states WHERE name = "California"
 )
+ORDER BY id;
