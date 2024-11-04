@@ -21,7 +21,5 @@ if __name__ == "__main__":
     cur.execute("SELECT * FROM states")
     rows = cur.fetchall()
     for row in rows:
-        for col in row:
-            print("%s, " % col)
-        print("\n")
+        print(row)
 
