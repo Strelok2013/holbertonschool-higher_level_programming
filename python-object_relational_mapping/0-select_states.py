@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-""""""
+""" A module that uses MySQLdb
+    to fetch all the states in 
+    the database 'hbtn_0e_0_usa'
+"""
 
 if __name__ == "__main__":
 
