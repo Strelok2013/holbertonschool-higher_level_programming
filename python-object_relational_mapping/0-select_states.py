@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ A module that uses MySQLdb
-    to fetch all the states in 
+    to fetch all the states in
     the database 'hbtn_0e_0_usa'
 """
 
@@ -22,4 +22,3 @@ if __name__ == "__main__":
     rows = cur.fetchall()
     for row in rows:
         print(row)
-
