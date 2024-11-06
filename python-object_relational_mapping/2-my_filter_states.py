@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 
-""""""
+"""
+    A module that fetches all entries
+    based on the string passed in
+    as an argument.
+"""
 
 import MySQLdb
 
@@ -20,7 +24,8 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host=h, port=p, user=usr, password=pwd, database=db)
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM `states` WHERE BINARY `name` = '{}'".format(search_name))
+    cur.execute("SELECT * FROM `states` \
+                WHERE BINARY `name` = '{}'".format(search_name))
     rows = cur.fetchall()
     for row in rows:
         print(row)

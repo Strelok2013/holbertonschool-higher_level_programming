@@ -2,7 +2,11 @@
 
 import MySQLdb
 
-""""""
+"""
+    A module that fetches all states
+    based on the argument passed in,
+    (hopefully) avoiding SQL injections
+"""
 
 if __name__ == "__main__":
 
@@ -19,7 +23,8 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host=h, port=p, user=usr, password=pwd, database=db)
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM `states` WHERE BINARY `name` = %s", (search_name,))
+    cur.execute("SELECT * FROM `states` \
+                WHERE BINARY `name` = %s", (search_name,))
     rows = cur.fetchall()
     for row in rows:
         print(row)

@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 
-""""""
+"""
+    Fetches All states and Cities
+    which have a matching state_id.
+    Prints them to output.
+"""
 
 import sys
 from sqlalchemy import create_engine
@@ -14,11 +18,12 @@ db = sys.argv[3]
 search_name = sys.argv[4]
 
 if __name__ == "__main__":
-    engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}".format(h, p, db))
+    engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}"
+                           .format(h, p, db))
     Session = sessionmaker(bind=engine)
     session = Session()
 
     for state, city in session.query(State, City) \
-                        .filter(State.id == City.state_id) \
-                        .order_by(City.id):
+            .filter(State.id == City.state_id) \
+            .order_by(City.id):
         print("{}: ({}) {}".format(state.name, city))

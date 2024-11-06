@@ -2,7 +2,12 @@
 
 import MySQLdb
 
-""""""
+"""
+    Fetches all cities which correspond
+    to a state in the database.
+    Entries that do not have a state id
+    are not listed.
+"""
 
 if __name__ == "__main__":
 

@@ -2,7 +2,10 @@
 
 import MySQLdb
 
-""""""
+"""
+    Module that fetches all states
+    starting with the letter N
+"""
 
 if __name__ == "__main__":
 

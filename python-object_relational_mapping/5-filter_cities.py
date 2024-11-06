@@ -1,8 +1,11 @@
 #!/usr/bin/python3
 
-import MYSQLdb
+import MySQLdb
 
-""""""
+"""
+    Module that fetches all cities that
+    are in a given state.
+"""
 
 if __name__ == "__main__":
 
@@ -21,7 +24,10 @@ if __name__ == "__main__":
 
     cur.execute("SELECT cities.id, cities.name, states.name FROM `cities` \
                  INNER JOIN states on cities.state_id = states.id \
-                 ORDER BY cities.id", search_name)
+                 WHERE states.name = %s\
+                 ORDER BY cities.id", (search_name,))
     rows = cur.fetchall()
+    count = 0
     for row in rows:
-        print(row)
+        print(row[1], end=', ')
+    print('')
