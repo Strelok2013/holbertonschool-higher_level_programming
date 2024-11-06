@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
-import MySQLdb
-
 """
     Module that fetches all cities that
     are in a given state.
 """
+
+import MySQLdb
 
 if __name__ == "__main__":
 

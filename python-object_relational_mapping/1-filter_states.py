@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 
-import MySQLdb
-
 """
     Module that fetches all states
     starting with the letter N
 """
+
+import MySQLdb
+
 
 if __name__ == "__main__":
 

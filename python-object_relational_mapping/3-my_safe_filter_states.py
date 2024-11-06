@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 
-import MySQLdb
-
 """
     A module that fetches all states
     based on the argument passed in,
     (hopefully) avoiding SQL injections
 """
+
+import MySQLdb
+
 
 if __name__ == "__main__":
 
